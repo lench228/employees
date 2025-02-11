@@ -1,15 +1,10 @@
-import {configureStore, createSlice} from "@reduxjs/toolkit";
-const initialState = {
-
-}
-const Slice = createSlice({
-
-    name:'base', initialState, selectors:{},reducers:{}
-})
+import { configureStore } from "@reduxjs/toolkit";
+import { BreadcrumbsSlice } from "../../shared/ui/breadcrumbs/model/breadcrumbs.slice.ts";
 
 const store = configureStore({
-    reducer:{[Slice.reducer.name]: Slice.reducer}
-
+  reducer: {
+    [BreadcrumbsSlice.name]: BreadcrumbsSlice.reducer,
+  },
 });
 
 export type RootState = ReturnType<typeof store.getState>;

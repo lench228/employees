@@ -1,6 +1,6 @@
-import React from "react";
+import { ReactElement } from "react";
 
 export default interface iRoute {
-    path: string;
-    element: React.ReactElement;
+  path: string;
+  element: ReactElement;
 }

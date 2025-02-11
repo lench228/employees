@@ -9,12 +9,15 @@ export default {
         xl: "3840px",
       },
       colors: {
-        inputs: "#155DA4",
+        accent: "#155DA4",
         main: "#292929",
         "main-dark": "#f5f5f5",
         secondary: "#B0B0B0",
-        accent: "#F2F2F2",
-        "accent-dark": "#3E3E3E",
+        "accent-grey": "#F2F2F2",
+        "accent-grey-dark": "#3E3E3E",
+      },
+      fontFamily: {
+        sans: "Raleway",
       },
     },
   },

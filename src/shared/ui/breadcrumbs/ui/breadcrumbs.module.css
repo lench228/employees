@@ -1,0 +1,15 @@
+.container{
+     @apply flex items-center justify-start w-full;
+    @apply py-4 px-4;
+}
+
+.crumb{
+    @apply flex items-center mr-4
+}
+
+.label{
+    @apply mr-4;
+    @apply  text-xs text-secondary;
+    @apply cursor-pointer;
+
+}

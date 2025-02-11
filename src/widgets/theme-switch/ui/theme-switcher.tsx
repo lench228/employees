@@ -18,11 +18,7 @@ export const ThemeSwitcher = () => {
       className={clsx(classes.container, isActive && "flex-row-reverse")}
     >
       <input id={"#themeSwitcher"} type={"checkbox"} className={"hidden"} />
-      <label
-        htmlFor={"#themeSwitcher"}
-        className={clsx()}
-        onClick={(e) => e.stopPropagation()}
-      >
+      <label htmlFor={"#themeSwitcher"} onClick={(e) => e.stopPropagation()}>
         {isActive ? <ThemeDark /> : <ThemeLight />}
       </label>
     </div>
