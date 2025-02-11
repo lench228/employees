@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+body{
+    @apply text-main dark:text-main-dark;
+    @apply bg-main-dark dark:bg-main;
+}
