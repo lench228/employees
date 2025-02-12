@@ -1,3 +1,9 @@
+import EmployeesControls from "../../../widgets/employees-controls";
+
 export const EmploysPage = () => {
-  return <div className={"text-black"}>Работники</div>;
+  return (
+    <section className={"text-black"}>
+      <EmployeesControls />
+    </section>
+  );
 };

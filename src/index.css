@@ -6,6 +6,9 @@
 body{
     @apply text-main dark:text-main-dark;
     @apply bg-main-dark dark:bg-main;
+
+    transition: 500ms ease-in-out;
+    transition-property: color,  background-color;
 }
 
 li, ul, ol {
@@ -34,7 +37,7 @@ li, ul, ol {
         font-style: normal;
         font-weight: 500;
         font-display: swap;
-        src: url('./assets/fonts/Raleway-Medium.ttf') format("truetype");
+        src: url('./assets/fonts/Raleway-Med`ium.ttf') format("truetype");
     }
     @font-face {
         font-family: 'Raleway Semibold';

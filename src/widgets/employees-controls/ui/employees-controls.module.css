@@ -1,0 +1,8 @@
+.header{
+    @apply flex flex-wrap gap-3;
+}
+
+.title{
+    @apply text-main text-[20px] font-bold mb-1;
+    @apply dark:text-main-dark;
+}

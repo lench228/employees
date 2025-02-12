@@ -1,10 +1,10 @@
 import { ThemeLight } from "../../../assets/icons/theme-light.tsx";
-import classes from "./theme-switcher.module.css";
+import classes from "./theme-switch.module.css";
 import { ThemeDark } from "../../../assets/icons/theme-dark.tsx";
 import React from "react";
 import clsx from "clsx";
 
-export const ThemeSwitcher = () => {
+export const ThemeSwitch = () => {
   const [isActive, setIsActive] = React.useState(false);
 
   const handleThemeSwitcherClick = () => {
@@ -14,7 +14,10 @@ export const ThemeSwitcher = () => {
 
   return (
     <div
-      onClick={handleThemeSwitcherClick}
+      onClick={(e) => {
+        e.stopPropagation();
+        handleThemeSwitcherClick();
+      }}
       className={clsx(classes.container, isActive && "flex-row-reverse")}
     >
       <input id={"#themeSwitcher"} type={"checkbox"} className={"hidden"} />

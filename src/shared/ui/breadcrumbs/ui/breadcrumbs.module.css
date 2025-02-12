@@ -1,6 +1,6 @@
 .container{
      @apply flex items-center justify-start w-full;
-    @apply py-4 px-4;
+    @apply py-4 px-6;
 }
 
 .crumb{

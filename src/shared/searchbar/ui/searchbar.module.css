@@ -1,0 +1,14 @@
+.input{
+    @apply w-full p-[10px] max-h-[34px];
+
+    @apply border-secondary border-[0.5px] rounded-[5px];
+    @apply bg-transparent;
+
+    &::placeholder{
+        @apply text-secondary text-xs;
+    }
+    &:focus{
+        @apply outline-accent;
+    }
+
+}

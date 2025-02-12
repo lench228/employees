@@ -3,6 +3,6 @@
     @apply dark:shadow-[0_4px_4px_0_rgba(0,0,0,0.1)];
     @apply shadow-[0_4px_4px_0_rgba(57,113,164,0.25)];
 }
-.main{
-
+main{
+    @apply px-6;
 }

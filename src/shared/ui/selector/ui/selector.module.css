@@ -1,0 +1,9 @@
+.container{
+    @apply flex justify-between items-center;
+}
+
+.label{
+    @apply text-xs text-main;
+    @apply dark:text-main-dark;
+    @apply mr-2;
+}

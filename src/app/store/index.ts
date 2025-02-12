@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { BreadcrumbsSlice } from "../../shared/ui/breadcrumbs/model/breadcrumbs.slice.ts";
+import FilterSlice from "../../shared/ui/filter/model/filter.slice.tsx";
 
 const store = configureStore({
   reducer: {
     [BreadcrumbsSlice.name]: BreadcrumbsSlice.reducer,
+    [FilterSlice.name]: FilterSlice.reducer,
   },
 });
 
