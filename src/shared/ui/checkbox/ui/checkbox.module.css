@@ -1,0 +1,5 @@
+.checkbox {
+    @apply border border-accent rounded-[2px];
+    @apply  px-[2px] py-[4px] min-w-[19px] h-[19px];
+    @apply flex items-center justify-center;
+}

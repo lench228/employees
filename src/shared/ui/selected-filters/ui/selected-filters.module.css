@@ -1,0 +1,28 @@
+.container{
+    @apply flex gap-3 flex-col justify-between w-[320px] mx-[-24px];
+    @apply px-6 py-7;
+    @apply bg-accent-grey;
+
+    @apply dark:bg-accent-grey-dark dark:text-main-dark;
+
+    @apply text-main;
+
+    transition: 500ms ease-in-out;
+    transition-property: color, background-color;
+}
+
+.title{
+    @apply font-medium text-[20px];
+}
+
+.tags{
+    @apply flex gap-4 flex-wrap;
+
+    @apply mb-1
+}
+
+.tag{
+    @apply flex items-center gap-[10px];
+
+    @apply p-[10px] bg-white rounded-[5px];
+}

@@ -1,0 +1,30 @@
+.tooltipContainer{
+    @apply flex flex-col  w-56 bg-main-dark;
+    @apply dark:bg-main;
+
+    @apply absolute left-0;
+
+    @apply p-5 border-t border-t-accent;
+
+    @apply shadow-[0_4px_4px_0_rgba(0,0,0,0.25)];
+}
+
+.tooltipItem{
+    @apply flex justify-between pb-3;
+
+    &:hover{
+        @apply opacity-70;
+    }
+}
+
+.tooltipItem:last-child{
+    @apply pb-0;
+}
+
+.label{
+    @apply text-xs text-main;
+
+    @apply dark:text-main-dark;
+
+    @apply w-full;
+}

@@ -1,7 +1,7 @@
 import Searchbar from "../../../shared/searchbar";
 import { Filters } from "../../../shared/ui/filter/ui/filters.tsx";
 import classes from "./employees-controls.module.css";
-import ChosenFilters from "../../../shared/ui/filter/ui/chosen-filters.tsx";
+import SelectedFilters from "../../../shared/ui/selected-filters";
 
 export const EmployeesControls = () => {
   return (
@@ -9,7 +9,7 @@ export const EmployeesControls = () => {
       <h1 className={classes.title}>Список сотрудников</h1>
       <Searchbar></Searchbar>
       <Filters></Filters>
-      <ChosenFilters></ChosenFilters>
+      <SelectedFilters></SelectedFilters>
     </header>
   );
 };

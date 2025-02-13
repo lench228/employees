@@ -1,6 +1,6 @@
 export const ThemeDark = () => (
   <svg
-    className={"sm:w-[17px] sm:h-[17px]"}
+    className={"h-full w-full"}
     viewBox="0 0 20 20"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
