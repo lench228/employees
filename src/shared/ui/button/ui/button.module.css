@@ -1,0 +1,6 @@
+.button{
+    @apply  bg-accent rounded w-full;
+    @apply py-[6px];
+
+    @apply text-main-dark font-semibold text-xs;
+}

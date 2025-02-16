@@ -5,6 +5,7 @@ import { useRef, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   getChosenFilters,
+  setQuery,
   toggleFilter,
 } from "../../filter/model/filter.slice.tsx";
 
@@ -28,6 +29,7 @@ export const Select = (props: SelectProps) => {
 
   const handleLiClick = () => {
     dispatch(toggleFilter({ value, label }));
+    dispatch(setQuery());
   };
 
   useEffect(() => {}, [isActive, label]);

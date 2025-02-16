@@ -1,6 +1,6 @@
 .container{
     @apply flex gap-3 flex-col justify-between w-[320px] mx-[-24px];
-    @apply px-6 py-7;
+    @apply px-6 py-4;
     @apply bg-accent-grey;
 
     @apply dark:bg-accent-grey-dark dark:text-main-dark;
@@ -25,4 +25,6 @@
     @apply flex items-center gap-[10px];
 
     @apply p-[10px] bg-white rounded-[5px];
+
+    @apply dark:bg-main;
 }

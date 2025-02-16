@@ -4,6 +4,9 @@ import { iFilterConfig, iFilterOption } from "./types.ts";
 interface iFilterSlice {
   activeFilter: string;
   chosen: Omit<iFilterConfig, "label">[];
+
+  query: string;
+  page: number;
 }
 
 const initialState: iFilterSlice = {
@@ -22,6 +25,9 @@ const initialState: iFilterSlice = {
       options: [],
     },
   ],
+
+  query: "",
+  page: 1,
 };
 
 const FilterSlice = createSlice({
@@ -30,6 +36,12 @@ const FilterSlice = createSlice({
   reducers: {
     setActiveFilter: (state, action: PayloadAction<string>) => {
       state.activeFilter = action.payload;
+    },
+    resetPages: (state) => {
+      state.page = 1;
+    },
+    incrementPage: (state) => {
+      state.page++;
     },
     toggleFilter: (state, action: PayloadAction<iFilterOption>) => {
       const activeFilter = state.activeFilter;
@@ -50,32 +62,46 @@ const FilterSlice = createSlice({
       }
     },
     removeFilter: (state, action: PayloadAction<iFilterOption>) => {
-      const filterName = state.chosen.filter(
-        (item) =>
-          item.options.filter((item) => item.value === action.payload.value)
-            .length > 0,
-      )[0];
-      if (filterName) {
-        const valueIndex = filterName.options.findIndex(
-          (item) => item.value === action.payload.value,
+      state.chosen.forEach((item) => {
+        item.options = item.options.filter(
+          (option) => option.value !== action.payload.value,
         );
+      });
+    },
 
-        if (valueIndex > -1) {
-          filterName.options.splice(valueIndex, 1);
-        } else {
-          filterName.options.push(action.payload);
+    setQuery: (state) => {
+      const params: string[] = [];
+      state.chosen.forEach((filter) => {
+        if (filter.options.length > 0) {
+          const values = filter.options.map((option) => option.value).join(",");
+          params.push(`${filter.query}=${values}`);
         }
-      }
+      });
+
+      state.query = params.join("&");
     },
   },
   selectors: {
     getActiveFilter: (state) => state.activeFilter,
     getChosenFilters: (state) => state.chosen,
+    getQueryParameters: (state) => state.query,
+    selectPage: (state) => state.page,
   },
 });
 
-export const { setActiveFilter, toggleFilter, removeFilter } =
-  FilterSlice.actions;
-export const { getActiveFilter, getChosenFilters } = FilterSlice.selectors;
+export const {
+  resetPages,
+  incrementPage,
+  setActiveFilter,
+  toggleFilter,
+  removeFilter,
+  setQuery,
+} = FilterSlice.actions;
+export const {
+  getActiveFilter,
+  getChosenFilters,
+  getQueryParameters,
+  selectPage,
+} = FilterSlice.selectors;
 
 export default FilterSlice;
