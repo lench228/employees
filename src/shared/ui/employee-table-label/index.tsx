@@ -8,8 +8,9 @@ const EmployeeTableLabel = (props: iEmployeeTableLabel) => {
   return (
     <td
       className={clsx(
-        " text-main text-xs px-3 py-3 min-w-[128px]  ",
-        "first:min-w-[80px] w-[80px] first:px-0",
+        "text-main dark:text-main-dark text-xs px-3 py-3 min-w-[128px]",
+        "first:min-w-[80px] first-w-[80px] first:px-0",
+        "transition-colors duration-500 ease-in-out",
       )}
     >
       {props.label}

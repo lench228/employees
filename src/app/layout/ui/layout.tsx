@@ -14,7 +14,7 @@ export const Layout = () => {
 
   useEffect(() => {
     dispatch(generateCrumbs(location.pathname));
-  });
+  }, [location.pathname, dispatch]);
 
   return (
     <div className="w-full h-full">

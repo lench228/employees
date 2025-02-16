@@ -2,7 +2,7 @@
     @apply flex flex-col  w-56 bg-main-dark;
     @apply dark:bg-main;
 
-    @apply absolute left-0;
+    @apply absolute left-0 z-10;
 
     @apply p-5 border-t border-t-accent;
 

@@ -1,0 +1,70 @@
+.container{
+    transition: 500ms ease-in-out;
+    transition-property: color, background-color;
+
+    @apply text-main dark:text-main-dark;
+}
+
+.header{
+    @apply flex gap-4 items-center mb-3;
+
+}
+
+.name{
+    @apply text-[20px] leading-5 text-main font-bold w-32;
+    @apply text-main dark:text-main-dark;
+    @apply mb-2;
+
+    transition: 500ms ease-in-out;
+    transition-property: color;
+
+}
+
+.position{
+    @apply text-main font-medium text-sm leading-4;
+    @apply text-main dark:text-main-dark;
+
+    transition: 500ms ease-in-out;
+    transition-property: color;
+
+}
+
+.image{
+    @apply rounded-[50%];
+}
+
+.stackUl{
+    @apply flex gap-2 flex-wrap;
+}
+
+.stackItem{
+    @apply bg-main-dark dark:bg-accent-grey-dark;
+
+    transition: 500ms ease-in-out;
+    transition-property: background-color;
+
+
+    @apply px-4 py-[10px] rounded-[5px];
+}
+
+.footer{
+    @apply flex gap-4 flex-col;
+}
+
+.footerHeader{
+    @apply font-bold;
+}
+
+.footerInfo{
+    @apply flex flex-col gap-3;
+    @apply text-sm;
+
+}
+
+.footerValue{
+    @apply font-normal;
+}
+
+.footerItem{
+    @apply w-fit font-medium;
+}

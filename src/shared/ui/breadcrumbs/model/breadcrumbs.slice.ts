@@ -28,18 +28,21 @@ export const BreadcrumbsSlice = createSlice({
       }
 
       const filtered = action.payload.split("/");
-      state.crumbs = filtered.map((item) => {
-        const label =
-          item === ""
-            ? "Главная"
-            : item === ROUTES.employees
-              ? "Список сотрудников"
-              : item;
-        return {
-          path: item,
-          label: label,
-        };
-      });
+
+      state.crumbs = filtered
+        .slice(filtered.length >= 3 ? 1 : 0)
+        .map((item) => {
+          const label =
+            item === ""
+              ? "Главная"
+              : item === ROUTES.employees
+                ? "Список сотрудников"
+                : item;
+          return {
+            path: item,
+            label: label,
+          };
+        });
     },
   },
   selectors: {

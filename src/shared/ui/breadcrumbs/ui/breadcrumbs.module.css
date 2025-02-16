@@ -1,5 +1,5 @@
 .container{
-     @apply flex items-center justify-start w-full;
+     @apply flex items-center  w-full;
     @apply py-4 px-6;
 }
 
@@ -8,8 +8,10 @@
 }
 
 .label{
-    @apply mr-4;
-    @apply  text-xs text-secondary;
+    @apply mr-4 w-full;
+    @apply  text-xs text-secondary text-nowrap;
     @apply cursor-pointer;
-
+    &:last-child{
+        margin-right:0;
+    }
 }
