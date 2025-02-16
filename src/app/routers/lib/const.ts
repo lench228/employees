@@ -1,6 +1,6 @@
 export const ROUTES = {
   home: "",
   employees: "employees",
-  employee: "employee/$id",
+  employee: ":id",
   empty: "*",
 };

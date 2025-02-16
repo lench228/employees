@@ -1,6 +1,6 @@
 .container{
     @apply flex gap-3 flex-col justify-between w-[320px] mx-[-24px];
-    @apply px-6 py-4;
+    @apply px-6 py-4 mb-6;
     @apply bg-accent-grey;
 
     @apply dark:bg-accent-grey-dark dark:text-main-dark;

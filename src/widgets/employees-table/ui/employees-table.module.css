@@ -1,0 +1,22 @@
+.table {
+    @apply max-w-[320px] overflow-x-scroll  block absolute  mx-[-24px] px-6;
+
+
+}
+
+.thead{
+    @apply w-full px-6;
+}
+
+.headLabels{
+    @apply  min-w-[410px] px-3 ;
+    @apply text-[10px] text-secondary ;
+
+}
+
+.hoverBg {
+    position: relative;
+    overflow: hidden;
+
+}
+

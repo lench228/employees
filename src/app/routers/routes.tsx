@@ -9,7 +9,7 @@ const HomePage = lazy(() => import("../../pages/home/index.ts"));
 
 export const PublicRoutes: iRoute[] = [
   {
-    path: `/${ROUTES.home}`,
+    path: `${ROUTES.home}`,
     element: (
       <Suspense fallback={<Preloader />}>
         <HomePage />
@@ -17,10 +17,18 @@ export const PublicRoutes: iRoute[] = [
     ),
   },
   {
-    path: `/${ROUTES.employees}`,
+    path: `${ROUTES.employees}`,
     element: (
       <Suspense fallback={<Preloader />}>
         <EmploysPage />
+      </Suspense>
+    ),
+  },
+  {
+    path: `${ROUTES.employees}/${ROUTES.employee}`,
+    element: (
+      <Suspense fallback={<Preloader />}>
+        <div>Сотрудник </div>
       </Suspense>
     ),
   },

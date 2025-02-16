@@ -4,6 +4,7 @@ import Layout from "../layout";
 
 export const AppRouter = createBrowserRouter([
   {
+    path: "/",
     element: <Layout />,
     children: [...PublicRoutes],
   },
