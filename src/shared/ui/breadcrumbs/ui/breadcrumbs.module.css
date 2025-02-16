@@ -1,6 +1,7 @@
 .container{
-     @apply flex items-center  w-full;
+    @apply flex items-center  w-full;
     @apply py-4 px-6;
+    @apply lg:px-[180px] lg:py-7;
 }
 
 .crumb{
@@ -11,6 +12,8 @@
     @apply mr-4 w-full;
     @apply  text-xs text-secondary text-nowrap;
     @apply cursor-pointer;
+
+    @apply lg:text-xl;
     &:last-child{
         margin-right:0;
     }

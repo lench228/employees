@@ -1,23 +1,35 @@
+
 .table {
-    @apply max-w-[320px] overflow-x-scroll  block absolute  mx-[-24px] px-6;
+    @apply max-w-[320px]  sm:overflow-x-scroll block     mx-[-24px] px-6;
+
+    @apply mid:max-w-none  mid:mx-[0px] mid:w-full;
+    
+    @media (min-width: 1920px) {
+        display: table;
+    }
+
+    @apply lg:px-[180px]
 
 
 }
 
 .thead{
-    @apply w-full px-6;
+
 }
 
 .headLabels{
-    @apply  min-w-[410px] px-3 ;
+    @apply  min-w-[410px] ;
 
     @apply text-[10px] text-secondary ;
 
+    @apply lg:text-xl;
+}
+.hoverBg{
+    &:hover{
+        @apply bg-secondary;
+    }
+
 }
 
-.hoverBg {
-    position: relative;
-    overflow: hidden;
 
-}
 

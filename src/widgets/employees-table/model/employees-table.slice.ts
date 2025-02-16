@@ -1,6 +1,6 @@
-import { iServerResponseEmployee } from "./types.ts";
 import { createSlice } from "@reduxjs/toolkit";
 import { getEmployeesThunk } from "../api";
+import { iServerResponseEmployee } from "../../../shared/api/types.ts";
 
 interface iEmployeesState {
   employees: iServerResponseEmployee[];

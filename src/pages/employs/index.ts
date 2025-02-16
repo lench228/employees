@@ -1,1 +1,0 @@
-export {EmploysPage as default} from './ui/employsPage.tsx'

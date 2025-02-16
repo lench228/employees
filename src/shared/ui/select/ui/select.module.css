@@ -1,5 +1,5 @@
 .tooltipContainer{
-    @apply flex flex-col  w-56 bg-main-dark;
+    @apply flex flex-col bg-main-dark w-[184px]  ;
     @apply dark:bg-main;
 
     @apply absolute left-0 z-10;
@@ -7,6 +7,8 @@
     @apply p-5 border-t border-t-accent;
 
     @apply shadow-[0_4px_4px_0_rgba(0,0,0,0.25)];
+
+    @apply lg:w-[267px] ;
 }
 
 .tooltipItem{
@@ -27,4 +29,6 @@
     @apply dark:text-main-dark;
 
     @apply w-full;
+
+    @apply lg:text-base;
 }

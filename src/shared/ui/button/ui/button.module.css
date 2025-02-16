@@ -1,6 +1,10 @@
 .button{
-    @apply  bg-accent rounded w-full;
+    @apply  bg-accent rounded;
     @apply py-[6px];
 
     @apply text-main-dark font-semibold text-xs;
+
+    @apply w-[272px] h-7;
+
+    @apply lg:w-[146px] lg:h-[45px] lg:text-[16px] lg:py-3 lg:px-6;
 }

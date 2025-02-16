@@ -2,7 +2,10 @@
     @apply w-full px-6 py-4 h-full;
     @apply dark:shadow-[0_4px_4px_0_rgba(0,0,0,0.1)];
     @apply shadow-[0_4px_4px_0_rgba(57,113,164,0.25)];
+
+    @apply lg:px-[180px];
 }
 main{
     @apply px-6;
+    @apply lg:px-[180px];
 }

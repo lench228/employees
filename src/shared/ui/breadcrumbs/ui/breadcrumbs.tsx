@@ -17,7 +17,7 @@ export const Breadcrumbs = () => {
 
             {index !== bread.length - 1 && (
               <svg
-                className={"w-[6px] h-[10px]"}
+                className={"w-[6px] h-[10px] lg:w-8 lg:w-13"}
                 width="8"
                 height="13"
                 viewBox="0 0 8 13"

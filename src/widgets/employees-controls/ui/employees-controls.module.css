@@ -1,10 +1,13 @@
 .header{
-    @apply flex flex-wrap gap-3;
+    @apply flex  gap-3 flex-wrap items-center ;
 }
 
 .title{
-    @apply text-main text-[20px] font-bold mb-1;
-    @apply dark:text-main-dark;
+    @apply text-[20px] font-bold mb-1;
+    @apply text-main dark:text-main-dark;
+    @apply transition-colors duration-500 ease-in-out;
+
+    @apply lg:text-[40px];
 }
 
 

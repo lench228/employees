@@ -20,7 +20,10 @@ export const Selector = (props: iSelector) => {
       </p>
 
       <svg
-        className={clsx(isActive && "rotate-180", "w-[5px] h-[10px]")}
+        className={clsx(
+          isActive && "rotate-180",
+          "w-[5px] h-[10px] lg:w-5 lg:h-[9px]",
+        )}
         width={"20"}
         height="9"
         viewBox="0 0 20 9"

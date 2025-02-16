@@ -11,10 +11,23 @@ body{
     transition-property: color,  background-color;
 }
 
+
 li, ul, ol {
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    vertical-align: baseline;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 @layer base {

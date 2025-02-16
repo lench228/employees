@@ -7,18 +7,27 @@
 
     @apply text-main;
 
-    transition: 500ms ease-in-out;
-    transition-property: color, background-color;
+    @apply transition-colors duration-500 ease-in-out;
+
+    @apply mid:w-full  ;
+
+
+    @apply mid:flex-row mid:w-[1024px] mid:mx-[-24px] lg:px-[180px] mid:py-[13px] mid:items-center;
+
+
+
 }
 
 .title{
-    @apply font-medium text-[20px];
+    @apply font-medium text-[20px] lg:mr-10;
 }
 
 .tags{
     @apply flex gap-4 flex-wrap;
 
-    @apply mb-1
+    @apply mb-1;
+
+    @apply mid:mr-auto;
 }
 
 .tag{
@@ -27,4 +36,9 @@
     @apply p-[10px] bg-white rounded-[5px];
 
     @apply dark:bg-main;
+
+    @apply lg:text-[16px];
+
+    transition: background-color 500ms ease-in-out;
+
 }
