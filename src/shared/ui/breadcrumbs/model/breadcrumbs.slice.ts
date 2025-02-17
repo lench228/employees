@@ -44,9 +44,9 @@ export const BreadcrumbsSlice = createSlice({
     },
   },
   selectors: {
-    getCrumbs: (store) => store.crumbs,
+    selectCrumbs: (store) => store.crumbs,
   },
 });
 
 export const { generateCrumbs } = BreadcrumbsSlice.actions;
-export const { getCrumbs } = BreadcrumbsSlice.selectors;
+export const { selectCrumbs } = BreadcrumbsSlice.selectors;

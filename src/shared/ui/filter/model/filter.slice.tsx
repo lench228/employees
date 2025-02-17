@@ -113,10 +113,11 @@ const FilterSlice = createSlice({
     },
   },
   selectors: {
-    getActiveFilter: (state) => state.activeFilter,
-    getChosenFilters: (state) => state.chosen,
-    getQueryParameters: (state) => state.query,
+    selectActiveFilter: (state) => state.activeFilter,
+    selectChosenFilters: (state) => state.chosen,
+    selectQueryParameters: (state) => state.query,
     selectPage: (state) => state.page,
+    selectSearch: (state) => state.search,
   },
 });
 
@@ -130,9 +131,10 @@ export const {
   setQuery,
 } = FilterSlice.actions;
 export const {
-  getActiveFilter,
-  getChosenFilters,
-  getQueryParameters,
+  selectActiveFilter,
+  selectChosenFilters,
+  selectQueryParameters,
+  selectSearch,
   selectPage,
 } = FilterSlice.selectors;
 

@@ -2,7 +2,7 @@
 import { useCallback, useRef } from "react";
 
 import {
-  getQueryParameters,
+  selectQueryParameters,
   incrementPage,
   selectPage,
 } from "../../../shared/ui/filter/model/filter.slice.tsx";
@@ -34,7 +34,7 @@ const EmployeesTableItem = (props: iEmployeesTableItem) => {
 
   const nav = useNavigate();
 
-  const query = useSelector(getQueryParameters);
+  const query = useSelector(selectQueryParameters);
   const isEnd = useSelector(selectIsEnd);
   const isLoading = useSelector(selectIsLoading);
   const dispatch = useDispatch<AppDispatch>();

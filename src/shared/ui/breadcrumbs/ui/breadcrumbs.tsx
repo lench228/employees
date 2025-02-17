@@ -1,10 +1,10 @@
 import { useSelector } from "react-redux";
-import { getCrumbs } from "../model/breadcrumbs.slice.ts";
+import { selectCrumbs } from "../model/breadcrumbs.slice.ts";
 import classes from "./breadcrumbs.module.css";
 import { Link } from "react-router-dom";
 
 export const Breadcrumbs = () => {
-  const bread = useSelector(getCrumbs);
+  const bread = useSelector(selectCrumbs);
 
   return (
     <div className={classes.container}>

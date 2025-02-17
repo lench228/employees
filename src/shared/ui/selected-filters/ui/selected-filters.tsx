@@ -1,9 +1,9 @@
 import { useDispatch, useSelector } from "react-redux";
 import {
-  getChosenFilters,
-  getQueryParameters,
+  selectQueryParameters,
   removeFilter,
   resetPages,
+  selectChosenFilters,
   setQuery,
   toggleFilter,
 } from "../../filter/model/filter.slice.tsx";
@@ -19,8 +19,8 @@ import {
 } from "../../../../widgets/employees-table/model/employees-table.slice.ts";
 
 export const SelectedFilters = () => {
-  const filters = useSelector(getChosenFilters);
-  const query = useSelector(getQueryParameters);
+  const filters = useSelector(selectChosenFilters);
+  const query = useSelector(selectQueryParameters);
 
   const isLoading = useSelector(selectIsLoading);
 

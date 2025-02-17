@@ -1,14 +1,14 @@
 import Selector from "../../selector";
 import classes from "./filter.module.css";
 import { useDispatch, useSelector } from "react-redux";
-import { getActiveFilter, setActiveFilter } from "../model/filter.slice.tsx";
+import { selectActiveFilter, setActiveFilter } from "../model/filter.slice.tsx";
 import filtersConfig from "../model/config.ts";
 import { useEffect, useRef } from "react";
 import Selects from "../../select";
 
 export const Filters = () => {
   const dispatch = useDispatch();
-  const activeFilter = useSelector(getActiveFilter);
+  const activeFilter = useSelector(selectActiveFilter);
   const containerRef = useRef<HTMLUListElement>(null);
 
   useEffect(() => {

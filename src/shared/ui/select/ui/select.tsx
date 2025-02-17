@@ -4,7 +4,7 @@ import { iFilterOption } from "../../filter/model/types.ts";
 import { useRef, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
-  getChosenFilters,
+  selectChosenFilters,
   setQuery,
   toggleFilter,
 } from "../../filter/model/filter.slice.tsx";
@@ -16,7 +16,7 @@ interface SelectProps extends iFilterOption {
 export const Select = (props: SelectProps) => {
   const { value, label, query } = { ...props };
 
-  const chosenFilters = useSelector(getChosenFilters);
+  const chosenFilters = useSelector(selectChosenFilters);
 
   const isActive =
     chosenFilters
