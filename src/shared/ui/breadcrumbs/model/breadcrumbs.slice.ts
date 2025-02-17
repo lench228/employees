@@ -22,22 +22,31 @@ export const BreadcrumbsSlice = createSlice({
   initialState,
   reducers: {
     generateCrumbs(state, action: PayloadAction<string>) {
-      if (action.payload === "/") {
+      const path =
+        action.payload.endsWith("/") && action.payload.length > 1
+          ? action.payload.slice(0, -1)
+          : action.payload;
+
+      if (path === "/") {
         state.crumbs = [];
         return;
       }
 
-      const filtered = action.payload.split("/");
+      const filtered = path.split("/");
 
-      state.crumbs = filtered.map((item) => {
-        const label =
-          item === ""
-            ? "Главная"
-            : item === ROUTES.employees
-              ? "Список сотрудников"
-              : item;
+      state.crumbs = filtered.map((item, index) => {
+        let label = item;
+        if (index === 0) {
+          label = "Главная";
+        } else if (item === ROUTES.employees) {
+          label = "Список сотрудников";
+        }
+
+        //Build up path using joined segments
+        const routePath = "/" + filtered.slice(0, index + 1).join("/");
+
         return {
-          path: item,
+          path: routePath,
           label: label,
         };
       });
