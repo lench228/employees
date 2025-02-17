@@ -4,8 +4,8 @@ import clsx from "clsx";
 import classes from "./layout.module.css";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { generateCrumbs } from "../../../shared/ui/breadcrumbs/model/breadcrumbs.slice.ts";
-import Breadcrumbs from "../../../shared/ui/breadcrumbs";
+import { generateCrumbs } from "../../../widgets/breadcrumbs/model/breadcrumbs.slice.ts";
+import Breadcrumbs from "../../../widgets/breadcrumbs";
 
 export const Layout = () => {
   const location = useLocation();

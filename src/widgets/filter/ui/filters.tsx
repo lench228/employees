@@ -1,10 +1,10 @@
-import Selector from "../../selector";
 import classes from "./filter.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { selectActiveFilter, setActiveFilter } from "../model/filter.slice.tsx";
 import filtersConfig from "../model/config.ts";
 import { useEffect, useRef } from "react";
-import Selects from "../../select";
+import Selects from "../../../shared/ui/select";
+import Selector from "../../../shared/ui/selector";
 
 export const Filters = () => {
   const dispatch = useDispatch();

@@ -1,10 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { BreadcrumbsSlice } from "../../shared/ui/breadcrumbs/model/breadcrumbs.slice.ts";
-import FilterSlice from "../../shared/ui/filter/model/filter.slice.tsx";
+
 import { EmployeesTableSlice } from "../../widgets/employees-table/model/employees-table.slice.ts";
 
 import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
+import { BreadcrumbsSlice } from "../../widgets/breadcrumbs/model/breadcrumbs.slice.ts";
+import FilterSlice from "../../widgets/filter/model/filter.slice.tsx";
 
 const persistConfig = {
   key: "root",

@@ -1,14 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
-import {
-  selectQueryParameters,
-  removeFilter,
-  resetPages,
-  selectChosenFilters,
-  setQuery,
-  toggleFilter,
-} from "../../filter/model/filter.slice.tsx";
+
 import classes from "./selected-filters.module.css";
-import { iFilterOption } from "../../filter/model/types.ts";
+
 import { Button } from "../../button/ui/button.tsx";
 
 import { getEmployeesThunk } from "../../../../widgets/employees-table/api";
@@ -17,6 +10,15 @@ import {
   deleteEmployees,
   selectIsLoading,
 } from "../../../../widgets/employees-table/model/employees-table.slice.ts";
+import {
+  removeFilter,
+  resetPages,
+  selectChosenFilters,
+  selectQueryParameters,
+  setQuery,
+  toggleFilter,
+} from "../../../../widgets/filter/model/filter.slice.tsx";
+import { iFilterOption } from "../../../../widgets/filter/model/types.ts";
 
 export const SelectedFilters = () => {
   const filters = useSelector(selectChosenFilters);

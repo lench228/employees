@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { ROUTES } from "../../../../app/routers/lib/const.ts";
+import { ROUTES } from "../../../app/routers/lib/const.ts";
 
 type iCrumb = {
   path: string;

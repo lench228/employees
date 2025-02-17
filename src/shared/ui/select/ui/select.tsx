@@ -1,13 +1,15 @@
 import classes from "./select.module.css";
 import Checkbox from "../../checkbox";
-import { iFilterOption } from "../../filter/model/types.ts";
+
 import { useRef, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   selectChosenFilters,
   setQuery,
   toggleFilter,
-} from "../../filter/model/filter.slice.tsx";
+} from "../../../../widgets/filter/model/filter.slice.tsx";
+
+import { iFilterOption } from "../../../../widgets/filter/model/types.ts";
 
 interface SelectProps extends iFilterOption {
   query: string;

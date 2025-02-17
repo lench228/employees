@@ -7,7 +7,7 @@ import Preloader from "../../../shared/ui/preloader";
 import classes from "./employee-page.module.css";
 import clsx from "clsx";
 import { useDispatch } from "react-redux";
-import { generateCrumbs } from "../../../shared/ui/breadcrumbs/model/breadcrumbs.slice.ts";
+import { generateCrumbs } from "../../../widgets/breadcrumbs/model/breadcrumbs.slice.ts";
 
 export const EmployeePage = () => {
   const location = useLocation();

@@ -1,10 +1,5 @@
 import { useCallback, useRef } from "react";
 
-import {
-  selectQueryParameters,
-  incrementPage,
-  selectPage,
-} from "../../../shared/ui/filter/model/filter.slice.tsx";
 import { getEmployeesThunk } from "../api";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -17,6 +12,11 @@ import { useNavigate } from "react-router-dom";
 import { ROUTES } from "../../../app/routers/lib/const.ts";
 
 import classes from "./employees-table.module.css";
+import {
+  incrementPage,
+  selectPage,
+  selectQueryParameters,
+} from "../../filter/model/filter.slice.tsx";
 
 interface iEmployeesTableItem {
   isLast?: boolean;

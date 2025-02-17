@@ -4,7 +4,7 @@ import {
   selectSearch,
   setQuery,
   setSearch,
-} from "../../ui/filter/model/filter.slice.tsx";
+} from "../../../../widgets/filter/model/filter.slice.tsx";
 
 export const Searchbar = () => {
   const dispatch = useDispatch();
