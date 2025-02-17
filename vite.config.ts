@@ -4,7 +4,7 @@ import stringHash from "string-hash";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/",
+  base: "/employees",
 
   css: {
     modules: {

@@ -12,7 +12,7 @@ export const EmployeesTable = () => {
   if (!data.length) {
     return (
       <div className={"text-center my-auto text-3xl dark:text-main-dark"}>
-        Сотрудники не найдены, попробуйте менее строгий фильтр
+        Сотрудники не найдены
       </div>
     );
   }

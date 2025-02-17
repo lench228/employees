@@ -31,11 +31,14 @@
         transition: background-color 500ms ease-in-out;
     }
 
-    transition: background-color 500ms ease-in-out;
+    transition:  500ms ease-in-out;
+    transition-property: color,background;
 }
 
 .title{
     @apply font-medium text-[20px] lg:mr-10;
+
+
 }
 
 .tags{

@@ -1,6 +1,6 @@
 import { checkResponse, EMPLOYEE_URL } from "../../../shared/api";
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { iServerResponseEmployee } from "../model/types.ts";
+import { iServerResponseEmployee } from "../../../shared/api/types.ts";
 
 export const getEmployees = (
   query: string,
