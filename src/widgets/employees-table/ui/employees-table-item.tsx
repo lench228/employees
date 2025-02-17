@@ -1,4 +1,3 @@
-// EmployeesTableItem.tsx
 import { useCallback, useRef } from "react";
 
 import {
