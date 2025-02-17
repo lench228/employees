@@ -38,7 +38,11 @@ export const SelectedFilters = () => {
       <ul className={classes.tags}>
         {filters.map((item) => {
           return item.options.map((item) => (
-            <li className={classes.tag} onClick={() => handleTagClick(item)}>
+            <li
+              className={classes.tag}
+              key={item.value}
+              onClick={() => handleTagClick(item)}
+            >
               <svg
                 width="10"
                 height="10"

@@ -13,4 +13,7 @@
         @apply outline-accent;
     }
 
+
+    @apply dark:text-main-dark text-main;
+
 }

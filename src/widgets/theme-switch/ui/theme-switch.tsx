@@ -14,7 +14,6 @@ export const ThemeSwitch = () => {
   };
 
   useEffect(() => {
-    console.log(isActive);
     if (isActive) document.documentElement.classList.add("dark");
     else document.documentElement.classList.remove("dark");
   }, [isActive]);

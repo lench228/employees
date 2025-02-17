@@ -10,9 +10,9 @@ interface iFilterItem {
 export const Selects = (props: iFilterItem) => {
   const { options, query } = { ...props };
   return (
-    <ul className={classes.tooltipContainer}>
+    <ul key={`Filter-${query}`} className={classes.tooltipContainer}>
       {options.map((item) => (
-        <Select {...item} query={query}></Select>
+        <Select key={item.value} {...item} query={query}></Select>
       ))}
     </ul>
   );

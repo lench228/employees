@@ -30,9 +30,9 @@ export const Selector = (props: iSelector) => {
         <path
           d="M0.5 0.5L4.61616 5.09317C5.10227 5.63561 5.89773 5.63561 6.38384 5.09317L10.5 0.5"
           stroke="#155DA4"
-          stroke-miterlimit="10"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeMiterlimit="10"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </svg>
     </div>

@@ -32,7 +32,7 @@ export const Filters = () => {
 
   return (
     <ul className={classes.container} ref={containerRef}>
-      {filtersConfig.map((config, index) => (
+      {filtersConfig.map((config) => (
         <li key={config.query}>
           <Selector
             onClick={() => dispatch(setActiveFilter(config.query))}
@@ -40,11 +40,7 @@ export const Filters = () => {
             label={config.label}
           />
           {activeFilter === config.query && (
-            <Selects
-              key={index}
-              options={config.options}
-              query={config.query}
-            />
+            <Selects options={config.options} query={config.query} />
           )}
         </li>
       ))}
