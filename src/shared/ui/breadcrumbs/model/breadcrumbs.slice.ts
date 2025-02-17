@@ -15,7 +15,6 @@ const initialState: iBreadcrumbs = {
 };
 
 // Возможно лишнее добавлять крошки в слайс, но в теории удобно и правильно
-// не нравятся волшебные строки
 
 export const BreadcrumbsSlice = createSlice({
   name: "Breadcrumbs",
@@ -42,8 +41,7 @@ export const BreadcrumbsSlice = createSlice({
           label = "Список сотрудников";
         }
 
-        //Build up path using joined segments
-        const routePath = "/" + filtered.slice(0, index + 1).join("/");
+        const routePath = filtered.slice(0, index + 1).join("/");
 
         return {
           path: routePath,
