@@ -1,7 +1,7 @@
 .container{
     @apply flex items-center  w-full;
     @apply py-4 px-6;
-    @apply lg:px-[180px] lg:py-7;
+    @apply mid:px-[180px] mid:py-7;
 }
 
 .crumb{

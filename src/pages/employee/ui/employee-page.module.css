@@ -3,10 +3,18 @@
     transition-property: color, background-color;
 
     @apply text-main dark:text-main-dark;
+
+
 }
 
 .header{
-    @apply flex gap-4 items-center mb-3;
+    @apply flex flex-wrap gap-4 items-center ;
+    @apply mb-3;
+
+    @apply  mid:text-nowrap mid:items-start mid:gap-[42px];
+
+
+
 
 }
 
@@ -14,15 +22,22 @@
     @apply text-[20px] leading-5 text-main font-bold w-32;
     @apply text-main dark:text-main-dark;
     @apply mb-2;
+    @apply mid:text-[40px] mid:w-full mid:leading-10 mid:mb-0;
 
     transition: 500ms ease-in-out;
     transition-property: color;
 
 }
+.aside{
+    @apply mid:flex mid:gap-4 mid:flex-col mid:py-[4.5px] ;
+}
+
 
 .position{
     @apply text-main font-medium text-sm leading-4;
     @apply text-main dark:text-main-dark;
+
+    @apply mid:text-2xl;
 
     transition: 500ms ease-in-out;
     transition-property: color;
@@ -31,11 +46,14 @@
 
 .image{
     @apply rounded-[50%];
+
+    @apply mid:w-[163px] mid:h-[163px];
 }
 
 .stackUl{
     @apply flex gap-2 flex-wrap;
 }
+
 
 .stackItem{
     @apply bg-main-dark dark:bg-accent-grey-dark;
@@ -45,6 +63,18 @@
 
 
     @apply px-4 py-[10px] rounded-[5px];
+    @apply text-xs;
+
+    @apply mid:px-[21.5px] mid:text-base;
+}
+.separator{
+    @apply my-5  lg:w-[full];
+
+    @apply h-[1px] bg-accent-grey dark:bg-accent-grey-dark;
+
+    transition: 500ms ease-in-out;
+    transition-property: background-color;
+
 }
 
 .footer{
@@ -53,12 +83,18 @@
 
 .footerHeader{
     @apply font-bold;
+    @apply mid:text-[32px];
 }
 
 .footerInfo{
     @apply flex flex-col gap-3;
     @apply text-sm;
 
+    @apply mid:text-2xl;
+
+}
+.footerKey{
+    @apply mid:w-full
 }
 
 .footerValue{
@@ -67,4 +103,6 @@
 
 .footerItem{
     @apply w-fit font-medium;
+
+    @apply mid:w-2/3
 }

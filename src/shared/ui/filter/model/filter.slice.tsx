@@ -4,8 +4,8 @@ import { iFilterConfig, iFilterOption } from "./types.ts";
 interface iFilterSlice {
   activeFilter: string;
   chosen: Omit<iFilterConfig, "label">[];
-
   query: string;
+  search: string;
   page: number;
 }
 
@@ -25,23 +25,47 @@ const initialState: iFilterSlice = {
       options: [],
     },
   ],
-
   query: "",
+  search: "",
   page: 1,
+};
+
+const loadState = (): iFilterSlice => {
+  try {
+    const serializedState = localStorage.getItem("filterState");
+    if (serializedState === null) {
+      return initialState;
+    }
+    return JSON.parse(serializedState);
+  } catch {
+    return initialState;
+  }
+};
+
+const saveState = (state: iFilterSlice) => {
+  try {
+    const serializedState = JSON.stringify(state);
+    localStorage.setItem("filterState", serializedState);
+  } catch (err) {
+    console.error("Could not save state to localStorage", err);
+  }
 };
 
 const FilterSlice = createSlice({
   name: "Filter",
-  initialState,
+  initialState: loadState(),
   reducers: {
     setActiveFilter: (state, action: PayloadAction<string>) => {
       state.activeFilter = action.payload;
+      saveState(state);
     },
     resetPages: (state) => {
       state.page = 1;
+      saveState(state);
     },
     incrementPage: (state) => {
       state.page++;
+      saveState(state);
     },
     toggleFilter: (state, action: PayloadAction<iFilterOption>) => {
       const activeFilter = state.activeFilter;
@@ -60,6 +84,7 @@ const FilterSlice = createSlice({
           chosenFilter.options.push(action.payload);
         }
       }
+      saveState(state);
     },
     removeFilter: (state, action: PayloadAction<iFilterOption>) => {
       state.chosen.forEach((item) => {
@@ -67,8 +92,8 @@ const FilterSlice = createSlice({
           (option) => option.value !== action.payload.value,
         );
       });
+      saveState(state);
     },
-
     setQuery: (state) => {
       const params: string[] = [];
       state.chosen.forEach((filter) => {
@@ -77,8 +102,14 @@ const FilterSlice = createSlice({
           params.push(`${filter.query}=${values}`);
         }
       });
-
+      params.push(`Name=${state.search}`);
       state.query = params.join("&");
+      saveState(state);
+    },
+
+    setSearch: (state, action: PayloadAction<string>) => {
+      state.search = action.payload;
+      saveState(state);
     },
   },
   selectors: {
@@ -90,6 +121,7 @@ const FilterSlice = createSlice({
 });
 
 export const {
+  setSearch,
   resetPages,
   incrementPage,
   setActiveFilter,

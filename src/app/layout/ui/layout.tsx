@@ -22,7 +22,7 @@ export const Layout = () => {
         <Navigation />
       </header>
       <Breadcrumbs></Breadcrumbs>
-      <main>
+      <main className={"mid:mx-[180px] sm:mx-[24px] px-0 h-screen"}>
         <Outlet />
       </main>
     </div>

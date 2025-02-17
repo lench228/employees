@@ -35,10 +35,6 @@ export const PublicRoutes: iRoute[] = [
   },
   {
     path: `/${ROUTES.empty}`,
-    element: (
-      <div>
-        <p>Ошибка 404</p>
-      </div>
-    ),
+    element: <div className={"text-center my-auto text-4xl"}>Ошибка 404</div>,
   },
 ];

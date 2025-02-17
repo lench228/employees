@@ -32,7 +32,7 @@ export const SelectedFilters = () => {
     dispatch(setQuery());
   };
 
-  return filters.filter((item) => item.options.length !== 0).length ? (
+  return (
     <div className={classes.container}>
       <h2 className={classes.title}>Выбранные фильтры:</h2>
       <ul className={classes.tags}>
@@ -75,7 +75,5 @@ export const SelectedFilters = () => {
         Найти
       </Button>
     </div>
-  ) : (
-    <></>
   );
 };

@@ -10,7 +10,11 @@ export const EmployeesTable = () => {
   // Не получается адекватно стилизовать таблицу, офк можно сделать через гриды, но
   // семантика нарушится
   if (!data.length) {
-    return <></>;
+    return (
+      <div className={"text-center my-auto text-3xl dark:text-main-dark"}>
+        Сотрудники не найдены, попробуйте менее строгий фильтр
+      </div>
+    );
   }
   return (
     <table className={classes.table}>

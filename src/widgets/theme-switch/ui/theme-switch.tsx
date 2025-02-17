@@ -1,16 +1,23 @@
 import { ThemeLight } from "../../../assets/icons/theme-light.tsx";
 import classes from "./theme-switch.module.css";
 import { ThemeDark } from "../../../assets/icons/theme-dark.tsx";
-import React from "react";
+
 import clsx from "clsx";
+import { UseLocalStorage } from "../../../shared/hooks/use-local-storage.tsx";
+import { useEffect } from "react";
 
 export const ThemeSwitch = () => {
-  const [isActive, setIsActive] = React.useState(false);
+  const [isActive, setIsActive] = UseLocalStorage("dark", false);
 
   const handleThemeSwitcherClick = () => {
     setIsActive(!isActive);
-    document.documentElement.classList.toggle("dark");
   };
+
+  useEffect(() => {
+    console.log(isActive);
+    if (isActive) document.documentElement.classList.add("dark");
+    else document.documentElement.classList.remove("dark");
+  }, [isActive]);
 
   return (
     <div

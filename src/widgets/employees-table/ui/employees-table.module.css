@@ -1,14 +1,14 @@
 
 .table {
-    @apply max-w-[320px]  sm:overflow-x-scroll block     mx-[-24px] px-6;
+    @apply max-w-[320px]  sm:overflow-x-scroll block mx-[-24px] sm:px-6;
 
     @apply mid:max-w-none  mid:mx-[0px] mid:w-full;
     
-    @media (min-width: 1920px) {
+    @media (min-width: 1440px) {
         display: table;
     }
 
-    @apply lg:px-[180px]
+    @apply lg:px-[180px] mid:px-0;
 
 
 }

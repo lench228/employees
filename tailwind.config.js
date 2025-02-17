@@ -7,7 +7,7 @@ export default {
         sm: "320px",
         mid: "680px",
         lg: "1920px",
-        xl: "3840px",
+        xl: "2560px",
       },
       colors: {
         accent: "#155DA4",
