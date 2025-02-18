@@ -36,7 +36,15 @@ export const EmployeesTableSlice = createSlice({
     builder.addCase(getEmployeesThunk.fulfilled, (state, action) => {
       if (action.payload.length) {
         state.isEnd = false;
-        state.employees = state.employees.concat(action.payload);
+
+        if (
+          state.employees[0] &&
+          state.employees[0].id !== action.payload[0].id
+        ) {
+          state.employees = state.employees.concat(action.payload);
+        } else {
+          state.employees = action.payload;
+        }
       } else {
         state.isEnd = true;
       }

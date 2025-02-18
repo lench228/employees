@@ -102,7 +102,11 @@ const FilterSlice = createSlice({
           params.push(`${filter.query}=${values}`);
         }
       });
-      params.push(`Name=${state.search}`);
+
+      if (state.search.length) {
+        params.push(`Name=${state.search}`);
+      }
+
       state.query = params.join("&");
       saveState(state);
     },
