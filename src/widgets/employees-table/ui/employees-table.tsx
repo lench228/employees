@@ -9,6 +9,7 @@ export const EmployeesTable = () => {
   const data = useSelector(selectEmployees);
   // Не получается адекватно стилизовать таблицу, офк можно сделать через гриды, но
   // семантика нарушится
+
   if (!data.length) {
     return (
       <div className={"text-center my-auto text-3xl dark:text-main-dark"}>
