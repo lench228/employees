@@ -3,7 +3,10 @@ import EmployeesTable from "../../../widgets/employees-table";
 import { useEffect, useCallback } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector, shallowEqual } from "react-redux"; // Import shallowEqual
-import { selectQueryParameters } from "../../../widgets/filter/model/filter.slice.tsx";
+import {
+  resetPages,
+  selectQueryParameters,
+} from "../../../widgets/filter/model/filter.slice.tsx";
 import { AppDispatch } from "../../../app/store";
 import { getEmployeesThunk } from "../../../widgets/employees-table/api";
 import {
@@ -43,6 +46,9 @@ export const EmployeesPage = () => {
     if (!data.length && !isLoading) {
       fetchEmployees();
     }
+    return () => {
+      dispatch(resetPages());
+    };
   }, [data.length, fetchEmployees, isLoading]);
 
   return (

@@ -1,7 +1,7 @@
 import classes from "./select.module.css";
 
-import { iFilterOption } from "../../filter/model/types.ts";
 import { Select } from "./select.tsx";
+import { iFilterOption } from "../../../../widgets/filter/model/types.ts";
 interface iFilterItem {
   options: iFilterOption[];
   query: string;
