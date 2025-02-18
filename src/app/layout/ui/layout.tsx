@@ -2,10 +2,11 @@ import { Outlet, useLocation } from "react-router-dom";
 import Navigation from "../../../widgets/navigation";
 import clsx from "clsx";
 import classes from "./layout.module.css";
-import { useEffect } from "react";
+import { Suspense, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { generateCrumbs } from "../../../widgets/breadcrumbs/model/breadcrumbs.slice.ts";
 import Breadcrumbs from "../../../widgets/breadcrumbs";
+import Preloader from "../../../shared/ui/preloader";
 
 export const Layout = () => {
   const location = useLocation();
@@ -14,7 +15,7 @@ export const Layout = () => {
 
   useEffect(() => {
     dispatch(generateCrumbs(location.pathname));
-  }, [location.pathname, dispatch]);
+  });
 
   return (
     <div className="w-full h-full">
@@ -23,7 +24,9 @@ export const Layout = () => {
       </header>
       <Breadcrumbs></Breadcrumbs>
       <main className={"mid:mx-[180px] sm:mx-[24px] px-0 h-screen"}>
-        <Outlet />
+        <Suspense fallback={<Preloader />}>
+          <Outlet />
+        </Suspense>
       </main>
     </div>
   );

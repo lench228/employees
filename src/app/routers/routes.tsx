@@ -1,37 +1,24 @@
-import { lazy, Suspense } from "react";
+import { lazy } from "react";
 import iRoute from "./types/types.ts";
-import Preloader from "../../shared/ui/preloader";
 
 import { ROUTES } from "./lib/const.ts";
-import { EmployeePage } from "../../pages/employee/ui/employee-page.tsx";
 
 const EmploysPage = lazy(() => import("../../pages/employees/index.ts"));
 const HomePage = lazy(() => import("../../pages/home/index.ts"));
+const EmployeePage = lazy(() => import("../../pages/employee/index.ts"));
 
 export const PublicRoutes: iRoute[] = [
   {
     path: `${ROUTES.home}`,
-    element: (
-      <Suspense fallback={<Preloader />}>
-        <HomePage />
-      </Suspense>
-    ),
+    element: <HomePage />,
   },
   {
     path: `${ROUTES.employees}`,
-    element: (
-      <Suspense fallback={<Preloader />}>
-        <EmploysPage />
-      </Suspense>
-    ),
+    element: <EmploysPage />,
   },
   {
     path: `${ROUTES.employees}/${ROUTES.employee}`,
-    element: (
-      <Suspense fallback={<Preloader />}>
-        <EmployeePage />
-      </Suspense>
-    ),
+    element: <EmployeePage />,
   },
   {
     path: `/${ROUTES.empty}`,
