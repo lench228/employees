@@ -1,11 +1,11 @@
 .header{
-    @apply w-full px-6 py-4 h-full;
+
+    @apply w-full px-6 py-4  h-full flex justify-center;
     @apply dark:shadow-[0_4px_4px_0_rgba(0,0,0,0.1)];
     @apply shadow-[0_4px_4px_0_rgba(57,113,164,0.25)];
 
-    @apply lg:px-[180px];
+    @apply lg:px-[180px] lg:pt-[25px] lg:py-6;
+
+
 }
-main{
-    @apply px-6;
-    @apply lg:px-[180px];
-}
+

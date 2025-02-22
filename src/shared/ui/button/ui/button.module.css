@@ -1,5 +1,5 @@
 .button{
-    @apply  bg-accent rounded;
+    @apply  bg-accent rounded font-raleway-semibold;
     @apply py-[6px];
 
     @apply text-main-dark font-semibold text-xs;

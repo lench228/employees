@@ -1,35 +1,40 @@
 
 .table {
-    @apply max-w-[320px]  sm:overflow-x-scroll block mx-[-24px] sm:px-6;
+    @apply max-w-[320px] w-[320px]  sm:overflow-x-scroll block mx-[-24px] ;
 
     @apply mid:max-w-none  mid:mx-[0px] mid:w-full;
     
     @media (min-width: 1440px) {
         display: table;
+        table-layout: fixed;
+        border-collapse: collapse;
+        border: none;
+
     }
 
-    @apply lg:px-[180px] mid:px-0;
-
-
-}
-
-.thead{
+    @apply mid:px-[168px] px-[0px];
 
 }
+
+
 
 .headLabels{
     @apply  min-w-[410px] ;
 
     @apply text-[10px] text-secondary ;
 
-    @apply lg:text-xl;
+    @apply lg:text-xl/[23px] !font-raleway;
 }
 .hoverBg{
+
     &:hover{
-        @apply bg-secondary;
+        @apply bg-accent-grey dark:bg-accent-grey-dark;
     }
 
 }
 
+th{
+    @apply first:lg:px-3 first:pl-6 pl-3;
+}
 
 

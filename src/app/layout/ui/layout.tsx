@@ -18,12 +18,12 @@ export const Layout = () => {
   });
 
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-full  lg:items-center">
       <header className={clsx(classes.header)}>
         <Navigation />
       </header>
       <Breadcrumbs></Breadcrumbs>
-      <main className={"mid:mx-[180px] sm:mx-[24px] px-0 h-screen"}>
+      <main className={"w-full"}>
         <Suspense fallback={<Preloader />}>
           <Outlet />
         </Suspense>

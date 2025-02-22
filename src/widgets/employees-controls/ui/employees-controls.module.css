@@ -1,13 +1,17 @@
 .header{
-    @apply flex  gap-3 flex-wrap items-center ;
+    @apply flex gap-3 flex-wrap items-center  ;
+
+    @apply  mb-6 mt-2;
+
+    @apply lg:mt-0 lg:gap-7 lg:mb-8;
 }
 
 .title{
-    @apply text-[20px] font-bold mb-1;
+    @apply text-[20px] font-bold;
     @apply text-main dark:text-main-dark;
     @apply transition-colors duration-500 ease-in-out;
 
-    @apply lg:text-[40px];
+    @apply lg:text-[40px]/[47px] ;
 }
 
 

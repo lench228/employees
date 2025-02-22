@@ -1,14 +1,12 @@
 .container{
     @apply flex gap-3 flex-col justify-between w-[320px];
-    @apply py-4 mb-6;
+    @apply py-4;
 
     @apply text-main dark:text-main-dark;
 
-    @apply transition-colors duration-500 ease-in-out;
-
     @apply mid:w-full;
 
-    @apply mid:flex-row  mid:items-center;
+    @apply mid:flex-row mid:items-center;
 
     position: relative;
 
@@ -21,10 +19,11 @@
         top: 0;
 
 
-        @apply  h-full w-screen mid:left-[-180px]  sm:left-[-24px] bg-accent-grey;
+
+        @apply  h-full w-screen  bg-accent-grey;
 
 
-        @apply dark:!bg-accent-grey-dark dark:!text-main-dark;
+        @apply dark:!bg-accent-grey-dark dark:!text-main-dark sm:mx-[-24px] mid:mx-[-180px] xl:mx-[-500px] 2xl:mx-[-1140px];
 
 
 
@@ -36,8 +35,8 @@
 }
 
 .title{
-    @apply font-medium text-[20px] lg:mr-10;
-
+    @apply font-raleway-medium text-sm/[16px]  lg:mr-10;
+    @apply lg:text-[20px]/[23px];
 
 }
 
@@ -50,7 +49,7 @@
 }
 
 .tag{
-    @apply flex items-center gap-[10px];
+    @apply flex items-center gap-[10px] text-xs font-raleway;
 
     @apply p-[10px] bg-white rounded-[5px];
 

@@ -1,19 +1,23 @@
 .container{
     @apply flex items-center  w-full;
-    @apply py-4 px-6;
-    @apply mid:px-[180px] mid:py-7;
+    @apply py-4 mid:px-6;
+    @apply  mid:py-7;
+
+    @apply lg:max-w-[1560px] lg:m-auto lg:px-0;
 }
 
 .crumb{
-    @apply flex items-center mr-4
+    @apply flex items-center mr-4;
 }
 
 .label{
     @apply mr-4 w-full;
-    @apply  text-xs text-secondary text-nowrap;
+
+    @apply   text-xs text-secondary text-nowrap;
+
     @apply cursor-pointer;
 
-    @apply lg:text-xl;
+    @apply lg:text-[20px]/[21px];
     &:last-child{
         margin-right:0;
     }

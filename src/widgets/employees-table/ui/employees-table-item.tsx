@@ -7,7 +7,7 @@ import {
   selectIsLoading,
 } from "../model/employees-table.slice.ts";
 import { AppDispatch } from "../../../app/store";
-import EmployeeTableLabel from "../../../shared/ui/employee-table-label";
+
 import { useNavigate } from "react-router-dom";
 import { ROUTES } from "../../../app/routers/lib/const.ts";
 
@@ -17,6 +17,7 @@ import {
   selectPage,
   selectQueryParameters,
 } from "../../filter/model/filter.slice.tsx";
+import EmployeeTableLabel from "../../../shared/ui/employee-table-label";
 
 interface iEmployeesTableItem {
   isLast?: boolean;
@@ -50,7 +51,7 @@ const EmployeesTableItem = (props: iEmployeesTableItem) => {
 
       observer.current = new IntersectionObserver((entries) => {
         if (entries[0].isIntersecting) {
-          if (query && !isEnd && !isLoading) {
+          if (!isEnd && !isLoading) {
             dispatch(incrementPage());
             dispatch(getEmployeesThunk({ query, page: page + 1 }));
           }

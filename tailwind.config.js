@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  darkMode: "class",
   theme: {
     extend: {
       screens: {
@@ -8,6 +9,7 @@ export default {
         mid: "680px",
         lg: "1920px",
         xl: "2560px",
+        "2xl": "3840px",
       },
       colors: {
         accent: "#155DA4",
@@ -18,10 +20,12 @@ export default {
         "accent-grey-dark": "#3E3E3E",
       },
       fontFamily: {
-        sans: "Raleway",
+        raleway: ["Raleway", "sans-serif"],
+        "raleway-medium": ["Raleway Medium", "sans-serif"],
+        "raleway-bold": ["Raleway Bold", "sans-serif"],
+        "raleway-semibold": ["Raleway Semibold", "sans-serif"],
       },
     },
   },
   plugins: [],
-  darkMode: "class",
 };

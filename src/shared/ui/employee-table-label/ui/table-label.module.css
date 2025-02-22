@@ -1,0 +1,8 @@
+.label{
+    @apply text-main dark:text-main-dark text-xs  font-raleway;
+    @apply first:px-6 pl-3 py-3  sm:min-w-[128px];
+    @apply transition-colors duration-500 ease-in-out;
+    @apply lg:text-xl/[23px] lg:py-7 lg:first:px-3;
+
+
+}

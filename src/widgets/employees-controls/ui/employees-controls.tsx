@@ -8,9 +8,11 @@ export const EmployeesControls = () => {
     <header className={classes.header}>
       {window.screen.width >= 1920 ? (
         <>
-          <div className={"flex items-center justify-between w-full"}>
+          <div
+            className={"flex items-center justify-between w-full mt-4 gap-7"}
+          >
             <h1 className={classes.title}>Список сотрудников</h1>
-            <Filters></Filters>
+            <Filters />
           </div>
           <Searchbar />
           <SelectedFilters></SelectedFilters>

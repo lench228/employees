@@ -4,25 +4,25 @@
 
     @apply text-main dark:text-main-dark;
 
+    @apply font-raleway;
 
+    @apply mid:px-[180px] px-6;
 }
 
 .header{
     @apply flex flex-wrap gap-4 items-center ;
-    @apply mb-3;
+    @apply mt-3;
 
-    @apply  mid:text-nowrap mid:items-start mid:gap-[42px];
+    @apply mid:text-nowrap mid:items-start mid:gap-[42px];
 
-
-
-
+    row-gap: 12px;
 }
 
 .name{
-    @apply text-[20px] leading-5 text-main font-bold w-32;
+    @apply font-raleway-bold text-[20px]/[23px] text-main w-32;
     @apply text-main dark:text-main-dark;
     @apply mb-2;
-    @apply mid:text-[40px] mid:w-full mid:leading-10 mid:mb-0;
+    @apply mid:text-[40px]/[47px] mid:w-full  mid:mb-0;
 
     transition: 500ms ease-in-out;
     transition-property: color;
@@ -34,8 +34,8 @@
 
 
 .position{
-    @apply text-main font-medium text-sm leading-4;
-    @apply text-main dark:text-main-dark;
+    @apply text-main font-raleway-medium text-sm/[16px];
+    @apply  dark:text-main-dark;
 
     @apply mid:text-2xl;
 
@@ -63,14 +63,16 @@
 
 
     @apply px-4 py-[10px] rounded-[5px];
-    @apply text-xs;
+    @apply text-xs/[14px];
 
     @apply mid:px-[21.5px] mid:text-base;
 }
 .separator{
-    @apply my-5  lg:w-[full];
+    @apply my-5  ;
 
     @apply h-[1px] bg-accent-grey dark:bg-accent-grey-dark;
+
+    @apply mid:w-[full] mid:my-10;
 
     transition: 500ms ease-in-out;
     transition-property: background-color;
@@ -78,31 +80,33 @@
 }
 
 .footer{
-    @apply flex gap-4 flex-col;
+    @apply flex gap-4 flex-col ;
 }
 
 .footerHeader{
-    @apply font-bold;
+    @apply font-bold font-raleway-semibold;
     @apply mid:text-[32px];
 }
 
 .footerInfo{
     @apply flex flex-col gap-3;
+
+
     @apply text-sm;
 
-    @apply mid:text-2xl;
+    @apply mid:text-2xl mid:gap-6;
 
 }
 .footerKey{
-    @apply mid:w-full
+    @apply mid:w-full;
 }
 
 .footerValue{
-    @apply font-normal;
+    @apply font-raleway;
 }
 
 .footerItem{
-    @apply w-fit font-medium;
+    @apply w-fit font-raleway-medium;
 
     @apply mid:w-2/3
 }

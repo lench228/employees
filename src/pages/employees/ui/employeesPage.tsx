@@ -9,7 +9,6 @@ import {
 } from "../../../widgets/filter/model/filter.slice.tsx";
 import { AppDispatch } from "../../../app/store";
 import { getEmployeesThunk } from "../../../widgets/employees-table/api";
-import { selectEmployees } from "../../../widgets/employees-table/model/employees-table.slice.ts";
 
 export const EmployeesPage = () => {
   const location = useLocation();
@@ -25,21 +24,19 @@ export const EmployeesPage = () => {
     }
   }, [query, location.pathname, navigate, location.search]);
 
-  const data = useSelector(selectEmployees);
-
   const dispatch = useDispatch<AppDispatch>();
 
   useEffect(() => {
-    if (!data.length) {
-      dispatch(getEmployeesThunk({ query: query, page: 1 }));
-      dispatch(resetPages());
-    }
+    dispatch(getEmployeesThunk({ query: query, page: 1 }));
+    dispatch(resetPages());
   }, []);
 
   return (
-    <section>
+    <section
+      className={"mid:mx-[180px] sm:mx-[24px] px-0 lg:max-w-[1560px] lg:m-auto"}
+    >
       <EmployeesControls />
-      <EmployeesTable></EmployeesTable>
+      <EmployeesTable />
     </section>
   );
 };
